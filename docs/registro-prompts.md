@@ -108,3 +108,68 @@ ok . en documentación veo que en Ventas falta Vinted y wallapop que son las pla
 ## Actualización de prioridad — resumen, no transcripción
 
 Se actualizó el apartado de funciones previstas del Doc técnico existente: Vinted y Wallapop pasan a prioridad solicitada junto con eBay y Facebook Marketplace. Se distingue del estado real: la demo solo prepara eBay/Facebook y simula correo. Se propone extender el mismo recorrido de revisión y publicación manual a los cuatro destinos, pendiente de revisión antes de cambiar código. El historial y la documentación de Drive se verificaron por lectura posterior, conservando entradas previas y sin duplicar la actualización. No se modificó la app ni se crearon integraciones.
+
+## Ventas, fotografías y cámara — 15 de octubre de 2026
+
+### P-20261015-AUTOMATIZACION-001 — Instrucción original
+
+```text
+Sí en Market Place Facebook y y Ebay se pudieran  automatizar los procesos podríamos hacerlo 
+```
+
+### P-20261015-CUENTAEBAY-001 — Respuesta original
+
+Pregunta de Codex (contexto): Para preparar la futura conexión oficial de eBay, ¿ya tienes una cuenta habilitada para vender y en qué país? No envíes contraseñas ni claves.
+
+```text
+Todavía no tengo cuenta
+```
+
+### P-20261015-ESTADO-002 — Mensaje original
+
+```text
+Hola otra vez , Cómo vamos? 
+```
+
+### P-20261015-IMAGENES-001 — Mensaje original
+
+```text
+y porqué no veo las imágenes en mi app
+```
+
+Nota de registro — resumen: Adjuntó una captura con las imágenes de la colección sin cargar. Esta nota describe el adjunto; no forma parte del mensaje literal.
+
+### P-20261015-RESUMENVENTAS-001 — Instrucción original
+
+```text
+echo en falta ver en venta en qué plataformas están puestos y fecha para saber si debemos bajar precios y tampoco veo precio puesto
+```
+
+### P-20261015-REVISIONPRECIO-001 — Respuesta original
+
+Pregunta de Codex (contexto): Para la nueva vista de Ventas: mostrar cada anuncio con plataforma, precio publicado, fecha y días publicado, y permitir registrar una revisión de precio; cualquier bajada la decidirás tú. ¿Te encaja este funcionamiento?
+
+```text
+Sí, así
+```
+
+### P-20261015-CAMARA-001 — Instrucción original
+
+```text
+y lo que no veo es la opción de hacer foto desde la app . mejor que insertar archivo. Seria más cómodo ...
+```
+
+### P-20261015-CAMARAAPROBACION-001 — Respuesta original
+
+Pregunta de Codex (contexto): Para hacer fotos desde Mis Cosas: añadir un botón «Hacer foto» que abra la cámara, permita revisar o repetir la foto y después añadirla al objeto, manteniendo «Añadir fotos». ¿Te encaja?
+
+```text
+Sí, con revisión antes de añadir
+```
+
+## Resultado de ventas y cámara — resumen, no transcripción
+
+Vinted y Wallapop incorporadas junto con eBay y Facebook Marketplace; selección y revisión de variantes, paquetes simulados con solo los destinos elegidos y seguimiento manual. Ventas muestra plataforma, precio publicado, fecha y antigüedad por anuncio. Las revisiones de precio guardan historial; no modifican anuncios externos. Las versiones aprobadas anteriores se conservan y los formularios obsoletos entre pestañas no sobrescriben textos o precios recientes. Cámara en Añadir/Editar objeto con captura, revisión, repetición y confirmación antes de guardar; cancelación libera las pistas y los archivos se validan con los límites existentes. Se recuperó la carga de fotografías recargando una pestaña antigua y se verificaron las seis fotos demo. 39 pruebas de dominio y 27 de navegador superadas; tipos, lint, build y revisión visual correctos. Cámara probada con API externa sustituida por MediaStream de canvas; cámara física y dictado acústico reales pendientes. No se crearon cuentas ni se publicaron anuncios o enviaron correos reales.
+
+Los mismos Docs y las seis capturas nuevas de Drive se verificaron por lectura posterior; se conservaron párrafos y prompts anteriores. No se duplicó la actualización ni se activó acceso público.
+

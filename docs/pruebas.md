@@ -4,6 +4,8 @@ Actualizado: 15 de octubre de 2026. Entorno: Node 24.19.0, pnpm 11.25.0, Vite 7.
 
 ## Evidencia
 
+Último resultado del 15 de octubre: 39 pruebas de dominio y 27 de navegador superadas. Las cifras de las secciones anteriores describen sus etapas históricas; la ampliación más reciente se detalla al final.
+
 - TypeScript: node node_modules/typescript/bin/tsc -b.
 - ESLint: node node_modules/eslint/bin/eslint.js .
 - Vitest: node node_modules/vitest/vitest.mjs run --configLoader native.
@@ -82,4 +84,29 @@ La captura móvil recoge una tarjeta tras desplazar la página; la de escritorio
 El registro del navegador integrado conserva un error histórico de conexión del WebSocket de Vite a las 10:08:12 UTC, durante el arranque/reinicio del servidor de esta sesión. Las páginas posteriores cargan y responden; el contexto nuevo de Edge usado para las capturas no registró errores ni advertencias. No se presenta todo el registro histórico del navegador integrado como limpio.
 
 Para evitar el atasco observado al empaquetar la configuración WASM, los comandos de desarrollo, pruebas, compilación y servidor E2E usan --configLoader native con el Node 24 probado. No se instalaron dependencias ni se cambiaron las protecciones del equipo.
+
+## Cuatro plataformas, precios, fotos y cámara — 15 de octubre de 2026
+
+Resultado final: 39 pruebas de dominio, 27 E2E, TypeScript, ESLint y compilación correctos. Suite completa: node node_modules/@playwright/test/cli.js test --workers=1. No se presentan el fallo inicial o un éxito parcial como verificación final.
+
+Dominio: se añaden plataformas/versiones, conservación de defectos y precio, bases obsoletas de anuncios, revisiones de precio con historial, importes/fechas inválidas, cierres/retiradas, conflictos de precio del mismo día y separación de revisión de precio frente a programación de acciones. La revisión independiente detectó sobrescritura de versiones y dos formularios obsoletos; se reprodujeron y corrigieron con pruebas RED/GREEN.
+
+E2E: cuatro recorridos de plataformas prueban selección de destinos, paquete filtrado, cierre Vinted con aviso de retirada Wallapop y un solo ingreso, compatibilidad de borradores anteriores y nueva versión al editar un anuncio aprobado. Tres recorridos prueban ventas sin publicaciones sin inventar datos, plataforma/precio/fecha/15 días y revisión persistente con historial, y carga de las seis fotos demo. Los doce recorridos iniciales y cuatro de Me prestan siguen pasando.
+
+Cámara: cuatro recorridos prueban revisión/repetición antes de añadir, JPEG/lectura lenta/guardado/recarga, descarte y cierre de pistas, permiso denegado sin perder formulario, y respuesta tardía después de cancelar. Se observó RED al faltar Hacer foto. El dispositivo falso nativo de Edge mostró reproducción intermitente; las pruebas definitivas sustituyen únicamente getUserMedia por MediaStream de canvas. El elemento de vídeo, captura JPEG, FileReader, IndexedDB y recarga son reales. No se utilizó cámara física ni audio del usuario. La revisión independiente de cámara no encontró fallos materiales dentro del alcance.
+
+Fotos: CUA leyó seis naturalWidth 0 en la pestaña antigua y un error histórico de WebSocket; los archivos existían y respondían 200 image/webp. La recarga de esa pestaña mostró imágenes de 1200 × 900, y el E2E recorrió las seis. No se borraron datos, no se restauró la demo y no se cambiaron las rutas de fotos. Se dejó el servidor local separado y se probó node scripts/start-demo.mjs reutilizando el servidor activo.
+
+| Comprobación visual | Resultado |
+| --- | --- |
+| URL/título, contenido y controles | Correctos en los recorridos comprobados |
+| Overlay de framework y consola del contexto de capturas | Sin errores o advertencias relevantes |
+| Escritorio 1435 × 1096 | Plataformas, resumen por anuncio y revisión de cámara inspeccionados |
+| Móvil 390 × 844 y 320 × 740 | Sin desbordamiento horizontal en recorridos comprobados |
+| Selección/cambio de plataforma | Textos independientes y dictado separado |
+| Captura de foto | Revisión explícita, Guardar bloqueado hasta cerrar cámara y terminar lectura |
+
+Capturas inspeccionadas: ventas-cuatro-plataformas-desktop/movil.png, ventas-resumen-desktop/movil.png y camara-revision-desktop/movil.png, en docs/capturas. Dos anuncios ficticios y el dibujo de cámara de prueba pertenecen solo a contextos aislados; no son publicaciones reales ni fotos del dispositivo de la usuaria. Se subieron a la carpeta de capturas existente, se verificaron tipo/padre/tamaño y se referenciaron desde el Doc técnico.
+
+Pendiente: cámara física, permisos reales del navegador integrado, reconocimiento acústico, Safari/iPhone, lector de pantalla, conexión desde teléfono real y despliegue seguro. eBay automático requiere cuenta del vendedor, autorización, servidor seguro y desarrollo; no está implementado. Para Facebook Marketplace no se confirmó una vía oficial aplicable a esta cuenta particular. No hay correo real ni tareas de servidor con app cerrada.
 

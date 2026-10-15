@@ -1,5 +1,7 @@
 import type { Item, Warranty, ItemCommand, DateOnly, Subscription, SaleInput, Alert, Draft } from './types';
 import { addDays, daysBetween, dateValid, money, uid } from './dates';
+import { salesPlatforms, platformName } from './platforms';
+export { platformName } from './platforms';
 export function warrantyStatus(w:Warranty,today:DateOnly):string {
   if(w.start&&!dateValid(w.start)||w.end&&!dateValid(w.end))throw new Error('Revisa las fechas de la garantía.');
   if(w.start&&w.end&&w.end<w.start)throw new Error('El vencimiento no puede ser anterior al inicio.');
@@ -93,7 +95,7 @@ export function prepareListings(i:Item,s:SaleInput):Draft[]{
   if(!Number.isInteger(s.price)||s.price<=0)throw new Error('Indica un precio de venta válido.');
   if(s.photoIds.some(id=>!i.assets.some(a=>a.id===id&&a.type==='photo')))throw new Error('Una foto seleccionada ya no existe.');
   const description=[i.description,i.brand?'Marca: '+i.brand:'',i.model?'Modelo: '+i.model:'','Estado: '+i.condition,i.defects?'Defectos: '+i.defects:'',i.accessories?'Accesorios: '+i.accessories:'','Precio: '+money(s.price)+(s.negotiable?' · Negociable':''),s.delivery,s.locality?'Localidad: '+s.locality:''].filter(Boolean).join('\n\n');
-  return (['ebay','facebook'] as const).map(platform=>({id:uid(),platform,title:i.name,description,price:s.price,photoIds:[...s.photoIds],version:Math.max(0,...i.drafts.filter(d=>d.platform===platform).map(d=>d.version))+1,approved:false}));
+  return salesPlatforms.map(({id:platform})=>({id:uid(),platform,title:i.name,description,price:s.price,photoIds:[...s.photoIds],version:Math.max(0,...i.drafts.filter(d=>d.platform===platform).map(d=>d.version))+1,approved:false}));
 }
 export function subscriptionSummary(subs:Subscription[]){
   let monthly=0,incomplete=0;
@@ -117,5 +119,4 @@ export function deriveAlerts(items:Item[],subs:Subscription[],today:DateOnly):Al
   }
   return alerts.sort((a,b)=>a.date.localeCompare(b.date));
 }
-export const platformName=(p:string)=>p==='ebay'?'eBay':'Facebook Marketplace';
 

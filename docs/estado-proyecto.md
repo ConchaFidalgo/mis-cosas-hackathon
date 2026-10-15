@@ -1,10 +1,10 @@
 # Estado de Mis Cosas
 
-Fecha: 15 de octubre de 2026. Etapa: demo local construida, ampliada con objetos que me prestan.
+Fecha: 15 de octubre de 2026. Etapa: demo local ampliada con Me prestan, cuatro plataformas de venta, revisión de precios y cámara.
 
 ## Funciona en esta versión
 
-Colección con seis objetos ficticios, alta/edición, búsqueda/filtros, fotografías y documentos, portada, archivo y recuperación; limpieza selectiva con confirmación; garantías visibles en navegación y ficha, fechas y documentos; préstamos, ampliación y devolución; donación con texto/fotos, paquete demo, acuerdo/cancelación/entrega; anuncios por plantillas para eBay y Facebook Marketplace, variantes editables, versiones, HTML/texto simple, ZIP y envío simulado; publicaciones/ofertas/reservas/cierre manual; suscripciones y centro de avisos; dictado por campo con propuesta revisable.
+Colección con seis objetos ficticios, alta/edición, búsqueda/filtros, fotografías y documentos, portada, archivo y recuperación; limpieza selectiva con confirmación; garantías visibles en navegación y ficha, fechas y documentos; préstamos, ampliación y devolución; donación con texto/fotos, paquete demo, acuerdo/cancelación/entrega; anuncios por plantillas para Vinted, Wallapop, eBay y Facebook Marketplace, variantes editables, versiones, HTML/texto simple, ZIP y envío simulado; publicaciones/ofertas/reservas/cierre manual; suscripciones y centro de avisos; dictado por campo con propuesta revisable.
 
 Los cambios se guardan en IndexedDB de este navegador. Se usa una transacción para evitar que dos pestañas pierdan las creaciones ajenas. No se presentan como sincronización ni cuentas reales.
 
@@ -20,11 +20,21 @@ Esta petición amplía el alcance base del PRD 3.2. Los tres archivos originales
 
 ## Prioridad adicional de ventas
 
-Prioridad de ventas solicitada el 15 de octubre: Vinted y Wallapop son los destinos de mayor interés, junto con eBay y Facebook Marketplace. El Doc técnico existente refleja esa prioridad en las funciones previstas. La demo todavía prepara solo eBay/Facebook y simula el correo. La ampliación propuesta mantiene revisión de textos/fotos, publicación manual y seguimiento; queda pendiente de revisar el recorrido propuesto antes de cambiar código. Los archivos originales del alcance 3.2 se conservan como base histórica.
+Vinted y Wallapop ya están incorporadas y aparecen primero, junto con eBay y Facebook Marketplace. Se eligen destinos, se revisan variantes y se prepara el paquete solo con los seleccionados. El correo sigue simulado. Se conservan versiones aprobadas anteriores y se detectan formularios obsoletos entre pestañas.
+
+Ventas muestra por anuncio la plataforma, el precio publicado, la fecha, los días transcurridos y la última revisión real de precio. Revisar precio conserva anterior, fecha y nota; no modifica el anuncio externo. Los objetos sin publicación registrada no muestran precios o fechas inventados y enlazan directamente al registro manual en su ficha.
+
+La usuaria autoriza estudiar automatización donde exista acceso oficial. eBay documenta publicación mediante API, pero todavía no tiene cuenta y la integración requiere desarrollo, servidor seguro y autorización. Para Facebook Marketplace no se ha confirmado una vía oficial aplicable a esta app y cuenta particular; se mantiene manual. Fuentes y límites en el Doc técnico existente. No se han creado cuentas ni publicado anuncios. Los archivos originales del alcance 3.2 se conservan como base histórica.
+
+## Cámara y fotografías
+
+En Añadir/Editar objeto aparece Hacer foto: cámara sin audio, captura, revisión, repetir o añadir, y guardado manual del formulario. Se mantiene Añadir fotos y los límites de 8 fotografías/10 MB. Cancelar y cerrar libera las pistas e invalida resultados tardíos; Guardar espera FileReader y la cámara cerrada. La calidad con cámara física y sus permisos reales sigue pendiente de probar.
+
+La pestaña de la usuaria conservaba una versión antigua con fotos sin cargar y conexión WebSocket fallida. Los archivos respondían HTTP 200; al recargar aparecieron decodificados. Se verifican las seis fotos demo en una prueba de navegador. No se restauraron sus datos. pnpm demo deja el servidor local separado de los comandos de pruebas; un servidor existente de Mis Cosas se reutiliza.
 
 ## Comprobado
 
-31 pruebas de dominio y 16 pruebas de navegador superadas. TypeScript, ESLint y compilación de Vite correctos. Navegador integrado de Codex: colección, garantías y formularios. QA de Me prestan a 1435 × 1096, 390 × 844 y 320 × 740; sin desbordamiento horizontal ni errores de consola en el contexto de prueba. Se detectó y corrigió texto demasiado estrecho en el resumen móvil. Pruebas detalladas en docs/pruebas.md.
+39 pruebas de dominio y 27 pruebas de navegador superadas. TypeScript, ESLint y compilación de Vite correctos. QA visual de ventas y cámara a 1435 × 1096, 390 × 844 y 320 × 740; sin desbordamiento horizontal ni errores de consola en los contextos de prueba. Las capturas de cámara muestran expresamente una imagen de prueba generada por canvas. No acreditan cámara física. Pruebas y revisiones detalladas en docs/pruebas.md.
 
 El tratamiento del dictado se probó con reconocimiento controlado: revisión/cancelación, cambio de plataforma y fecha imposible. La calidad acústica con el micrófono real de la usuaria todavía no se ha comprobado.
 
@@ -49,4 +59,6 @@ Originales de requisitos conservados sin edición. Datos ficticios y tipografía
 El Doc técnico existente y el historial se actualizaron durante esta sesión. La lectura posterior confirmó el texto añadido una sola vez, los prompts conservados y ausencia del correo personal. Se subieron las tres capturas y se verificaron sus IDs, carpeta, formato y tamaño mediante lectura directa de metadatos. La búsqueda indexada de la subcarpeta devolvió vacío; no se tomó como prueba de ausencia. El conector no devolvió el checksum solicitado, por lo que no se afirma comparación de hash remoto. No se ha activado acceso público ni se han enviado correos reales.
 
 Actualización del 15 de octubre: los mismos Docs contienen la ampliación y los tres mensajes originales nuevos, comprobados por lectura posterior sin duplicados. Se añadieron dos capturas de Me prestan a la carpeta existente, verificando ID, tipo PNG, padre y tamaño. IDs: escritorio 1Lh8W1IZeyZP-2igBLGXJoOP_XQ8JgTVn (118231 bytes), móvil 1H_Lsajiq-NQGBrvaccYMDPvFTtr_Sva9 (42510 bytes). Son ejemplos ficticios de un contexto de prueba separado; no se añadieron registros a la colección de la usuaria.
+
+Actualización posterior del 15 de octubre: el apartado de funciones de Ventas ya refleja las cuatro plataformas implementadas. Se añadieron las instrucciones y aprobaciones originales de automatización, resumen de ventas y cámara, y se verificó la conservación de los párrafos anteriores. Se subieron seis capturas nuevas de plataformas, resumen y cámara, con lectura de metadatos y tamaños coincidentes con los locales. Permanecen privadas, como los Docs; no se ha activado acceso público.
 
