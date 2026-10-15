@@ -18,6 +18,10 @@ Al cargar o modificar colecciones anteriores se añade una lista vacía sin borr
 
 Esta petición amplía el alcance base del PRD 3.2. Los tres archivos originales permanecen conservados sin edición; la petición literal y su aprobación constan en el historial.
 
+## Prioridad adicional de ventas
+
+Prioridad de ventas solicitada el 15 de octubre: Vinted y Wallapop son los destinos de mayor interés, junto con eBay y Facebook Marketplace. El Doc técnico existente refleja esa prioridad en las funciones previstas. La demo todavía prepara solo eBay/Facebook y simula el correo. La ampliación propuesta mantiene revisión de textos/fotos, publicación manual y seguimiento; queda pendiente de revisar el recorrido propuesto antes de cambiar código. Los archivos originales del alcance 3.2 se conservan como base histórica.
+
 ## Comprobado
 
 31 pruebas de dominio y 16 pruebas de navegador superadas. TypeScript, ESLint y compilación de Vite correctos. Navegador integrado de Codex: colección, garantías y formularios. QA de Me prestan a 1435 × 1096, 390 × 844 y 320 × 740; sin desbordamiento horizontal ni errores de consola en el contexto de prueba. Se detectó y corrigió texto demasiado estrecho en el resumen móvil. Pruebas detalladas en docs/pruebas.md.

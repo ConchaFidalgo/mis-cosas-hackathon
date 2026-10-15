@@ -98,3 +98,13 @@ ok
 ## Resultado de esta ampliación — resumen, no transcripción
 
 Se incorporó Me prestan y se renombró la sección saliente a Prestado. Se guardan dueño/alias, fechas, estado, accesorios y notas, con edición, ampliación, devolución e historial. Avisos en Inicio, dictado revisado y datos anteriores conservados. Se corrigieron edición concurrente entre pestañas y distribución móvil. Pasan 31 pruebas de dominio, 16 de navegador, tipos, lint y build. Capturas y Docs de Drive actualizados y verificados. La app sigue siendo una demo local sin correo real ni servidor privado.
+
+## P-20261015-PLATAFORMAS-001 — Instrucción original
+
+```text
+ok . en documentación veo que en Ventas falta Vinted y wallapop que son las plataformas de ventas que más interesan ..
+```
+
+## Actualización de prioridad — resumen, no transcripción
+
+Se actualizó el apartado de funciones previstas del Doc técnico existente: Vinted y Wallapop pasan a prioridad solicitada junto con eBay y Facebook Marketplace. Se distingue del estado real: la demo solo prepara eBay/Facebook y simula correo. Se propone extender el mismo recorrido de revisión y publicación manual a los cuatro destinos, pendiente de revisión antes de cambiar código. El historial y la documentación de Drive se verificaron por lectura posterior, conservando entradas previas y sin duplicar la actualización. No se modificó la app ni se crearon integraciones.
