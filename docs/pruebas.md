@@ -110,3 +110,10 @@ Capturas inspeccionadas: ventas-cuatro-plataformas-desktop/movil.png, ventas-res
 
 Pendiente: cámara física, permisos reales del navegador integrado, reconocimiento acústico, Safari/iPhone, lector de pantalla, conexión desde teléfono real y despliegue seguro. eBay automático requiere cuenta del vendedor, autorización, servidor seguro y desarrollo; no está implementado. Para Facebook Marketplace no se confirmó una vía oficial aplicable a esta cuenta particular. No hay correo real ni tareas de servidor con app cerrada.
 
+
+
+## Fotografía directa de garantías — 15 de octubre de 2026
+
+Añadir garantía y Editar garantía incluyen Fotografiar garantía o ticket. La imagen se revisa o repite antes de asociarla; se guarda como documento con la garantía en la misma transacción. Cancelar descarta los archivos nuevos. No hay reconocimiento automático de contenido ni de fechas.
+
+Verificado: 29 pruebas de navegador superadas, TypeScript, ESLint y compilación correctos. Dos pruebas nuevas comprueban asociación tras recarga y cancelación sin documentos guardados. La cámara usa un MediaStream simulado en pruebas; cámara física pendiente. Botón revisado en el navegador integrado sin errores de consola. Captura: docs/capturas/garantia-fotografiar.jpg (JPEG).

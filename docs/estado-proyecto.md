@@ -62,3 +62,10 @@ Actualización del 15 de octubre: los mismos Docs contienen la ampliación y los
 
 Actualización posterior del 15 de octubre: el apartado de funciones de Ventas ya refleja las cuatro plataformas implementadas. Se añadieron las instrucciones y aprobaciones originales de automatización, resumen de ventas y cámara, y se verificó la conservación de los párrafos anteriores. Se subieron seis capturas nuevas de plataformas, resumen y cámara, con lectura de metadatos y tamaños coincidentes con los locales. Permanecen privadas, como los Docs; no se ha activado acceso público.
 
+
+
+## Fotografía directa de garantías — 15 de octubre de 2026
+
+Añadir garantía y Editar garantía incluyen Fotografiar garantía o ticket. La imagen se revisa o repite antes de asociarla; se guarda como documento con la garantía en la misma transacción. Cancelar descarta los archivos nuevos. No hay reconocimiento automático de contenido ni de fechas.
+
+Verificado: 29 pruebas de navegador superadas, TypeScript, ESLint y compilación correctos. Dos pruebas nuevas comprueban asociación tras recarga y cancelación sin documentos guardados. La cámara usa un MediaStream simulado en pruebas; cámara física pendiente. Botón revisado en el navegador integrado sin errores de consola. Captura: docs/capturas/garantia-fotografiar.jpg (JPEG).

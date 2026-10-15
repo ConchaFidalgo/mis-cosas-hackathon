@@ -173,3 +173,22 @@ Vinted y Wallapop incorporadas junto con eBay y Facebook Marketplace; selección
 
 Los mismos Docs y las seis capturas nuevas de Drive se verificaron por lectura posterior; se conservaron párrafos y prompts anteriores. No se duplicó la actualización ni se activó acceso público.
 
+
+
+## Fotografía directa de garantías — 15 de octubre de 2026
+
+P-20261015-CAMARAGARANTIA-001. Pregunta original:
+
+```text
+y en añadir garantia puedo hacerle la foto? 
+```
+
+Contexto del asistente (resumen): propuso Fotografiar garantía o ticket dentro de Añadir garantía, con revisión antes de guardar y asociación directa.
+
+P-20261015-CAMARAGARANTIA-002. Aprobación original:
+
+```text
+perfecto. Así es como lo queiro 
+```
+
+Resultado: implementado con persistencia conjunta de garantía y documento; cancelar no guarda archivos nuevos. Sin reconocimiento automático. 29 pruebas de navegador superadas; cámara física pendiente.
