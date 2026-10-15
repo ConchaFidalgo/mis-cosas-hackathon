@@ -5,6 +5,9 @@ export interface Asset { id: string; name: string; type: 'photo' | 'document'; u
 export interface Warranty { id: string; provider: string; coverage?: string; start?: DateOnly; end?: DateOnly; confirmed: boolean; contact?: string; notes?: string; documentIds?: string[]; }
 export interface ItemEvent { id: string; date: string; title: string; origin: string; }
 export interface Loan { id: string; person: string; given: DateOnly; due?: DateOnly; returned?: DateOnly; accessories: string; returnNotes?: string; previousDates: DateOnly[]; reviewDate?: DateOnly; }
+export interface BorrowedInput { name:string; owner:string; received:DateOnly; due?:DateOnly; condition:string; accessories:string; notes:string; }
+export interface BorrowedItem extends BorrowedInput { id:string; returned?:DateOnly; returnNotes?:string; events:ItemEvent[]; }
+export type BorrowedCommand = {type:'edit';input:BorrowedInput;previous:BorrowedInput} | {type:'extend';due:DateOnly} | {type:'return';notes:string};
 export interface Donation { id: string; person: string; due?: DateOnly; delivered?: DateOnly; cancelled?: boolean; conditions: string; text: string; photoIds: string[]; }
 export interface Draft { id: string; platform: Platform; title: string; description: string; price: number; photoIds: string[]; version: number; approved: boolean; }
 export interface Publication { id: string; platform: Platform; url: string; status: 'publicada' | 'pausada' | 'reservada' | 'retirada' | 'vendida'; price: number; date: DateOnly; removalPending?: boolean; nextAction?:string; actionDate?:DateOnly; lastReviewed?:DateOnly; offers: {id:string;amount:number;date:DateOnly;note:string}[]; }
@@ -13,7 +16,7 @@ export interface Subscription { id:string; service:string; company:string; categ
 export interface Alert { id:string; title:string; description:string; date:DateOnly; href:string; kind:'warranty'|'loan'|'subscription'|'sale'; }
 export interface AlertResolution { id:string; completed?:boolean; postponed?:DateOnly; }
 export interface EmailJob { id:string; operationId:string; itemId:string; date:string; status:'simulated'; kind?:'sale'|'donation'; donationText?:string; donationConditions?:string; drafts:Draft[]; assets:Asset[]; }
-export interface AppState { schemaVersion:1; items:Item[]; subscriptions:Subscription[]; resolutions:AlertResolution[]; emails:EmailJob[]; }
+export interface AppState { schemaVersion:1; items:Item[]; borrowed:BorrowedItem[]; subscriptions:Subscription[]; resolutions:AlertResolution[]; emails:EmailJob[]; }
 export type ItemCommand =
 | {type:'lend';person:string;due?:DateOnly;accessories?:string;reviewDate?:DateOnly}
 | {type:'extend';due:DateOnly}

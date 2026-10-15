@@ -75,4 +75,26 @@ Se realizó una revisión independiente y se corrigieron versiones antiguas de a
 
 No hay cuentas, servidor de datos privado, email real, tarea programada ni despliegue remoto configurados. La demo guarda datos ficticios en este navegador. Nada se publica en mercados externos.
 
+## Ampliación de préstamos — 15 de octubre de 2026
 
+## P-20261015-MEPRESTAN-001 — Instrucción original
+
+```text
+Podriamos añadir una sección más que sea para objetos que me prestan a mí? 
+```
+
+## P-20261015-NOMBRES-001 — Instrucción original
+
+```text
+Quizás sería mejor llamar a los que yo presto " Prestado " y "Me prestan" a las que me prestan a mí . 
+```
+
+## P-20261015-APROBACION-001 — Respuesta original
+
+```text
+ok 
+```
+
+## Resultado de esta ampliación — resumen, no transcripción
+
+Se incorporó Me prestan y se renombró la sección saliente a Prestado. Se guardan dueño/alias, fechas, estado, accesorios y notas, con edición, ampliación, devolución e historial. Avisos en Inicio, dictado revisado y datos anteriores conservados. Se corrigieron edición concurrente entre pestañas y distribución móvil. Pasan 31 pruebas de dominio, 16 de navegador, tipos, lint y build. Capturas y Docs de Drive actualizados y verificados. La app sigue siendo una demo local sin correo real ni servidor privado.

@@ -28,6 +28,8 @@ Crear y editar objetos, fotos y documentos, elegir portada, buscar y filtrar, ar
 
 Garantías tiene sección propia en la navegación y pestaña en cada ficha. Los documentos se conservan al quitar garantía salvo elección explícita. Facturas y precio de compra no se incluyen en paquetes.
 
+«Prestado» reúne lo que tú prestas. «Me prestan» guarda objetos ajenos con dueño/alias, fechas, estado, accesorios y notas, separados del inventario propio. Permite editar, ampliar y devolver con historial, avisos en Inicio y dictado revisado. En móvil se accede desde «Más». Los datos de versiones anteriores se conservan.
+
 ## Pendientes
 
 Supabase, autenticación, aislamiento entre cuentas, archivos privados de servidor, remitente de correo real y proceso diario de servidor. La demo no envía correos ni publica anuncios. Comparación manual de ofertas e IA se abordan después del núcleo.
@@ -35,6 +37,8 @@ Supabase, autenticación, aislamiento entre cuentas, archivos privados de servid
 ## Windows
 
 Los ejecutables nativos de esbuild/Rollup están bloqueados por Control de aplicaciones en este equipo. pnpm-workspace.yaml usa sus versiones WebAssembly oficiales. No se ha desactivado ninguna protección del sistema.
+
+Los scripts usan --configLoader native con Node 24 para evitar el atasco de empaquetado de la configuración observado en este equipo.
 
 ## Materiales
 

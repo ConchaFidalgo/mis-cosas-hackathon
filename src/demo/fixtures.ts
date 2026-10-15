@@ -22,6 +22,6 @@ export function fixtures():AppState{
  {id:'sub-music',service:'Música en casa',company:'Melodía · Ficticia',status:'activa',cost:1099,period:'monthly',renewal:addDays(today,20),events:[]},
  {id:'sub-reading',service:'Club de lectura',company:'Página · Ficticia',status:'activa',cost:6000,period:'yearly',renewal:addDays(today,7),events:[]}
  ];
- return {schemaVersion:1,items,subscriptions,resolutions:[],emails:[]};
+ return {schemaVersion:1,items,borrowed:[],subscriptions,resolutions:[],emails:[]};
 }
 
