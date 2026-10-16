@@ -192,3 +192,22 @@ perfecto. Así es como lo queiro
 ```
 
 Resultado: implementado con persistencia conjunta de garantía y documento; cancelar no guarda archivos nuevos. Sin reconocimiento automático. 29 pruebas de navegador superadas; cámara física pendiente.
+
+
+## Compresión y reanudación — 16 de octubre de 2026
+
+Aprobación original de compresión:
+
+```text
+pues incorporalo, Bien hecho chat. Buen apunte :):) 
+```
+
+Mensaje original de reanudación:
+
+```text
+Seguimos con nuestro proyecto chat. Dime como vamos a seguir y qué pasos vamos a dar. ahora mismo veo que las imágenes no se ven ...
+```
+
+Adjunto: captura del catálogo sin fotografías (descripción resumida).
+
+Resultado: seis imágenes recuperadas sin borrar datos; compresión de nuevas capturas con perfiles para objetos y documentos, revisión del archivo final. Ocho pruebas de navegador superadas; hardware y Supabase pendientes.

@@ -117,3 +117,14 @@ Pendiente: cámara física, permisos reales del navegador integrado, reconocimie
 Añadir garantía y Editar garantía incluyen Fotografiar garantía o ticket. La imagen se revisa o repite antes de asociarla; se guarda como documento con la garantía en la misma transacción. Cancelar descarta los archivos nuevos. No hay reconocimiento automático de contenido ni de fechas.
 
 Verificado: 29 pruebas de navegador superadas, TypeScript, ESLint y compilación correctos. Dos pruebas nuevas comprueban asociación tras recarga y cancelación sin documentos guardados. La cámara usa un MediaStream simulado en pruebas; cámara física pendiente. Botón revisado en el navegador integrado sin errores de consola. Captura: docs/capturas/garantia-fotografiar.jpg (JPEG).
+
+
+## Reanudación y compresión — 16 de octubre de 2026
+
+Seis imágenes recuperadas al recargar la pestaña tras comprobar el servidor, sin borrar datos. Archivos servidos HTTP 200 y seis naturalWidth 1200 en el navegador integrado. La sesión local pierde disponibilidad al apagar el PC; no es una corrección permanente de alojamiento.
+
+Nuevas capturas de cámara: objetos hasta 1600 px en el lado largo, JPEG 0,82 y ajuste hasta 0,68 buscando 400 KB sin garantizar un peso fijo; garantías hasta 2800 px, calidad 0,94. No amplía imágenes pequeñas. Se revisa la copia final con su peso y enlace para verla en grande. Fotos existentes y selección de archivos sin cambios. Sigue guardándose localmente, sin Supabase conectado.
+
+Verificación: 8 pruebas de navegador superadas, TypeScript, ESLint y compilación correctos. Cámara simulada; hardware y legibilidad real pendientes. Captura: docs/capturas/imagenes-recuperadas-2026-10-16.jpg.
+
+Plan hacia el 19: 16, base de datos y archivos privados; 17, cuentas y enlace remoto con pruebas móviles; 18, correo, avisos y revisión; 19, vídeo, documentación, permisos y presentación. Depende de acceso a las cuentas.
