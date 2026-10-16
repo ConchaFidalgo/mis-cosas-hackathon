@@ -211,3 +211,22 @@ Seguimos con nuestro proyecto chat. Dime como vamos a seguir y qué pasos vamos 
 Adjunto: captura del catálogo sin fotografías (descripción resumida).
 
 Resultado: seis imágenes recuperadas sin borrar datos; compresión de nuevas capturas con perfiles para objetos y documentos, revisión del archivo final. Ocho pruebas de navegador superadas; hardware y Supabase pendientes.
+
+
+## Supabase — 16 de octubre de 2026
+
+Instrucción original:
+
+```text
+quiero que todo eso lo hagas tú 
+```
+
+Contexto: creación de organización y proyecto gratuito. La usuaria introdujo la contraseña directamente en Supabase.
+
+Mensaje original posterior:
+
+```text
+OK . Ya he puesto la contraseña 
+```
+
+Resultado: organización y proyecto Mis Cosas creados; panel Healthy en Irlanda, plan Free. No se han conectado todavía las tablas ni la app.

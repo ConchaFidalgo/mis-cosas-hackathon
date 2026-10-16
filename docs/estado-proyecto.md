@@ -80,3 +80,10 @@ Nuevas capturas de cámara: objetos hasta 1600 px en el lado largo, JPEG 0,82 y 
 Verificación: 8 pruebas de navegador superadas, TypeScript, ESLint y compilación correctos. Cámara simulada; hardware y legibilidad real pendientes. Captura: docs/capturas/imagenes-recuperadas-2026-10-16.jpg.
 
 Plan hacia el 19: 16, base de datos y archivos privados; 17, cuentas y enlace remoto con pruebas móviles; 18, correo, avisos y revisión; 19, vídeo, documentación, permisos y presentación. Depende de acceso a las cuentas.
+
+
+## Proyecto Supabase creado — 16 de octubre de 2026
+
+Organización Mis Cosas (Free), identificador xbaeiuppdnflqmynljbn. Proyecto Mis Cosas, referencia qirkzlrjyjhvxcsibeds, estado Healthy comprobado en el panel, cómputo NANO y región West EU (Ireland), eu-west-1. URL del panel: https://supabase.com/dashboard/project/qirkzlrjyjhvxcsibeds. Estos identificadores no son credenciales.
+
+Data API activa, exposición automática de tablas nuevas desactivada y RLS automática activada en el formulario de creación. La usuaria introdujo la contraseña directamente, sin compartirla. No se ha guardado ninguna clave en el repositorio. No hay migraciones ni repositorio conectado. Faltan tablas, políticas por usuario, Storage privado, autenticación y conexión de la app. La app sigue guardando localmente.
