@@ -22,7 +22,7 @@ test('donación: texto editable y paquete sin precio ni facturas',async({page})=
 test('dos pestañas crean objetos sin perder la otra creación',async({page,context})=>{
  await page.goto('/cosas');const second=await context.newPage();await second.goto('/cosas');
  for(const [p,name]of [[page,'Objeto uno'],[second,'Objeto dos']] as const){await p.getByRole('button',{name:'Añadir objeto',exact:true}).click();await p.getByRole('textbox',{name:'Nombre *',exact:true}).fill(name);await p.getByRole('combobox',{name:'Categoría *',exact:true}).selectOption('Otros');}
- await page.getByRole('button',{name:'Guardar',exact:true}).click();await second.getByRole('button',{name:'Guardar',exact:true}).click();await page.reload();await expect(page.getByRole('heading',{name:'Objeto uno',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'Objeto dos',exact:true})).toBeVisible();
+ await Promise.all([page.getByRole('button',{name:'Guardar',exact:true}).click(),second.getByRole('button',{name:'Guardar',exact:true}).click()]);await expect(page.getByRole('status')).toContainText('Objeto añadido');await expect(second.getByRole('status')).toContainText('Objeto añadido');await page.reload();await expect(page.getByRole('heading',{name:'Objeto uno',exact:true})).toBeVisible();await expect(page.getByRole('heading',{name:'Objeto dos',exact:true})).toBeVisible();
 });
 
 

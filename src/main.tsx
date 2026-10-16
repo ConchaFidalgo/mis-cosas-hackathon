@@ -10,6 +10,7 @@ import '@fontsource/fraunces/latin-500.css';
 import '@fontsource/fraunces/latin-600.css';
 import { StoreProvider } from './app/Store';
 import { App } from './app/App';
+import {SessionProvider} from './app/Session';
 import './styles/global.css';
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><StoreProvider><App/></StoreProvider></BrowserRouter></React.StrictMode>);
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><SessionProvider><StoreProvider><App/></StoreProvider></SessionProvider></BrowserRouter></React.StrictMode>);
 
