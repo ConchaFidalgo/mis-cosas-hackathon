@@ -13,7 +13,7 @@ import { dateLabel, todayMadrid, uid, parseMoney, money } from '../../domain/dat
 import { salesPlatforms } from '../../domain/platforms';
 export function ItemDetail(){
  const [searchParams]=useSearchParams();
- const {id}=useParams(),{state,command,update,toast}=useStore(),navigate=useNavigate(),item=state.items.find(i=>i.id===id),[tab,setTab]=useState(()=>searchParams.get('vista')==='ventas'?'Ventas':'Información'),[modal,setModal]=useState(''),[selectedPhoto,setPhoto]=useState(''),[fileToDelete,setFileToDelete]=useState(''),[error,setError]=useState('');
+ const {id}=useParams(),{state,command,update,toast}=useStore(),navigate=useNavigate(),item=state.items.find(i=>i.id===id),[tab,setTab]=useState(()=>searchParams.get('vista')==='ventas'?'Ventas':searchParams.get('vista')==='donacion'?'Donación':'Información'),[modal,setModal]=useState(''),[selectedPhoto,setPhoto]=useState(''),[fileToDelete,setFileToDelete]=useState(''),[error,setError]=useState('');
  if(!item)return <div className="empty"><Package size={40}/><h1>Este objeto ya no está aquí</h1><Link className="button" to="/cosas">Volver a Mis cosas</Link></div>;
  const photos=item.assets.filter(a=>a.type==='photo'),loan=activeLoan(item),donation=item.donations.find(d=>!d.delivered&&!d.cancelled),blocked=['vendido','donado','reciclado'].includes(item.status),today=todayMadrid();
  const act=async(c:ItemCommand)=>{try{await command(item.id,c);toast('Cambios guardados');}catch(e){setError((e as Error).message);}};
