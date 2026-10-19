@@ -11,7 +11,8 @@
     "typecheck": "tsc -b",
     "test": "vitest run --configLoader native",
     "test:e2e": "playwright test",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:public": "node scripts/build-public.mjs"
   },
   "dependencies": {
     "@fontsource/fraunces": "^5.2.8",

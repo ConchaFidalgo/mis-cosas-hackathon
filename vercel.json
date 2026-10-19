@@ -1,0 +1,5 @@
+{
+  "buildCommand": "pnpm run build:public",
+  "outputDirectory": "dist",
+  "rewrites": [{"source": "/((?!assets/|demo/|favicon.svg).*)", "destination": "/index.html"}]
+}
