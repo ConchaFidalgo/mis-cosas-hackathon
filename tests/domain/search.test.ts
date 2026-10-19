@@ -2,6 +2,13 @@ import {describe,it,expect} from 'vitest';
 import {blankItem} from '../../src/demo/fixtures';
 import {searchCollection} from '../../src/domain/search';
 describe('búsqueda general',()=>{
+ it('encuentra archivos por nombre y suscripciones sin leer el interior de PDF',()=>{
+  const box={...blankItem(),name:'Caja',assets:[{id:'a',name:'Factura-taladro.pdf',type:'document' as const,url:'/demo.pdf',size:1}]};
+  const subscriptions=[{id:'s',service:'Musica demo',company:'Sonido',status:'activa' as const,period:'monthly' as const,events:[]}];
+  const docs=searchCollection([box],[],'factura',subscriptions);
+  expect(docs).toHaveLength(1);expect(docs[0].name).toBe('Factura-taladro.pdf');expect(docs[0].href).toBe('/cosas/'+box.id);
+  expect(searchCollection([box],[],'Sonido',subscriptions)[0].name).toBe('Musica demo');
+ });
  it('encuentra contenido fuera del trastero, ignora tildes y conserva ubicación de archivados',()=>{
   const box={...blankItem(),name:'Caja de herramientas',location:'Lavadero',storageContents:'Cinco brocas y batería',archived:true};
   const results=searchCollection([box],[],'bateria');
