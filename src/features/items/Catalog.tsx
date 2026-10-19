@@ -10,7 +10,7 @@ export function Catalog(){
  const items=state.items.filter(i=>{
   if(filter==='Archivados'?!i.archived:!query&&i.archived)return false;
   if(category&&i.category!==category)return false;
-  if(query&&![i.name,i.brand,i.model,i.location,...i.donations.map(d=>d.person)].join(' ').toLocaleLowerCase('es').includes(query.toLocaleLowerCase('es')))return false;
+  if(query&&![i.name,i.brand,i.model,i.location,i.storagePurpose??'',i.storageContents??'',...i.donations.map(d=>d.person)].join(' ').toLocaleLowerCase('es').includes(query.toLocaleLowerCase('es')))return false;
   if(filter==='En uso')return i.status==='en uso'&&!activeLoan(i);
   if(filter==='Guardados')return i.status==='guardado'&&!activeLoan(i);
   if(filter==='Prestados')return !!activeLoan(i);

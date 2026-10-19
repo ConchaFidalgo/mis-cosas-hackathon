@@ -1,0 +1,11 @@
+# Trastero y dictado de importes — 19 de octubre de 2026
+
+La usuaria pidió resolver el dictado del precio antes de entregar. El reconocimiento del navegador podía devolver palabras (noventa) o un resultado vacío; la app no convertía esas palabras y mostraba una revisión vacía. Se añadió conversión conservadora de importes españoles, céntimos y separadores decimales, escucha continua en campos de euros, explicación de dictado vacío y reintento. El precio siempre se revisa y aplica manualmente, y el formulario se guarda aparte. Un texto ambiguo como 19 90 no se interpreta automáticamente.
+
+Pruebas controladas: noventa → 90, diecinueve coma noventa → 19,90, dictado vacío y regresiones de fecha inválida, cancelación y cambio de plataforma. No equivalen a una prueba del micrófono de la usuaria ni garantizan la transcripción externa de Chrome.
+
+Trastero gestiona un único espacio. Crear objeto en trastero abre el formulario existente con ubicación Trastero, estado guardado y fecha de almacenaje. Permite foto desde cámara con revisión o archivo, descripción, para qué sirve y contenido de una caja en texto libre. No requiere crear una ficha por cada elemento de la caja. El buscador incluye ese contenido. Se pueden trasladar objetos existentes, registrar su fecha de entrada, sacarlos indicando destino y fecha y consultar movimientos. Se conservan fotos, documentos, ficha e historial. El préstamo activo y los objetos cerrados bloquean el traslado; se comprueba que la ubicación no cambió mientras estaba abierto el formulario. Las fechas futuras se rechazan.
+
+Los campos de trastero son opcionales para conservar las colecciones anteriores. Se muestran en la ficha del objeto y se incluyen en la mezcla de ediciones por campo. La demo pública sigue siendo local en cada navegador; no se habilita la cuenta privada ni servicios de pago.
+
+Verificación local: 58 pruebas de dominio correctas, recorrido de caja con foto y contenido, búsqueda HDMI, salida a despacho, reentrada y recarga correctos; capturas de escritorio y móvil; tipos, lint y build público correctos. La compilación avisa de un bundle de unos 507 KB, sin impedir el build. Cámara física y nueva prueba de voz de la usuaria pendientes de ejecución humana.
