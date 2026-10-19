@@ -1,4 +1,5 @@
 import {execFileSync,spawn} from 'node:child_process';
+import process from 'node:process';
 import {fileURLToPath} from 'node:url';
 import {dirname,join} from 'node:path';
 const root=dirname(dirname(fileURLToPath(import.meta.url)));
